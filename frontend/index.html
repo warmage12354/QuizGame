@@ -1,45 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head> 
-    
-    
+  <head>
+    <title>JavaScript Quiz</title>
+  </head>
+  <body>
+    <h1>How Much Do you Know About JavaScript</h1>
 
-<title>JavaScript Quiz</title>
-</head>
-<body>
+    <div class="quizHolder">
+      <div class="quizHeader"><h2 id="Question"></h2></div>
 
-<h1>How Much Do you Know About JavaScript</h1> 
+      <div class="quizContent">
+        <div id="options"></div>
 
-<div class = "quizHolder" > 
-
-    <div class="quizHeader" > <h2 id = "get" >     </h2>  </div>
-
-
-
-
-    <div class= "quizContent"  > 
-
-        <form> 
-        
-            <input type = "radio" id = "inputField" placeholder = "Enter Answer Here"><br> 
-            <input type="submit" id = "SubmitButton"   value="Submit Answer " onclick= "onClick()" >
-
-
-
-
-
-        </form>
-        
-    
+        <button id="SubmitButton" onclick="checkAnswer()">Submit Answer</button>
+      </div>
     </div>
-
-
-</div>
-
-
-
-
-</body> 
-<link rel="stylesheet" href="styles.css">
-<script src="app.js"></script>
+  </body>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js"></script>
 </html>

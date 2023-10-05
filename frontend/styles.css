@@ -1,59 +1,40 @@
-body { 
-
-    background-color: aquamarine;
-
-} 
-
-h1 { 
-    
-    text-align: center; 
-    background-color: antiquewhite;
-
-} 
-
-.quizHolder { 
-    
-    margin-top: 90px;
-    position:relative; 
-    left: 50%;
-    display:inline-block;
-    text-align: center; 
-    background-color:navajowhite; 
-    border-style: solid; 
-    
-
-}  
-
-.quizHeader {  
-  
-    background-color:crimson;
-    padding: 10px;
-
-} 
-
-.quizContent { 
-
-    padding: 20px;
-    
-
+body {
+  background-color: aquamarine;
 }
 
-#inputField { 
-
-    margin: 10px;
-    
-
+h1 {
+  text-align: center;
+  background-color: antiquewhite;
 }
 
-#SubmitButton { 
-    margin: 10px;
-    border: none; 
-    padding: 20px;  
-    background-color: darkcyan;   
-    border-radius: 10px;
-    width: auto;
-
-
+.quizHolder {
+  margin-top: 90px;
+  position: relative;
+  left: 45%;
+  display: inline-block;
+  text-align: center;
+  background-color: navajowhite;
+  border-style: solid;
 }
 
+.quizHeader {
+  background-color: crimson;
+  padding: 10px;
+}
 
+.quizContent {
+  padding: 20px;
+}
+
+#inputField {
+  margin: 10px;
+}
+
+#SubmitButton {
+  margin: 10px;
+  border: none;
+  padding: 20px;
+  background-color: darkcyan;
+  border-radius: 10px;
+  width: auto;
+}
