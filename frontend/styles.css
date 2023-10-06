@@ -1,40 +1,49 @@
 body {
-  background-color: aquamarine;
+  background-color:whitesmoke
 }
 
 h1 {
   text-align: center;
-  background-color: antiquewhite;
+  background-color:cadetblue;  
+  border-radius: 20px;
+  
 }
 
 .quizHolder {
   margin-top: 90px;
   position: relative;
-  left: 45%;
+  left: 42%;
   display: inline-block;
   text-align: center;
-  background-color: navajowhite;
-  border-style: solid;
+  background-color:powderblue;
+  border-style: solid; 
+  border-radius: 10px;
 }
 
 .quizHeader {
-  background-color: crimson;
-  padding: 10px;
-}
+  background-color:cadetblue;
+  padding: 10px;  
+  border-top-right-radius: 5px; 
+  border-top-left-radius: 5px;
+} 
 
 .quizContent {
   padding: 20px;
 }
 
-#inputField {
-  margin: 10px;
+#selectionsText { 
+
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  
+
 }
+
 
 #SubmitButton,#resetButton {
   margin: 10px;
   border: none;
   padding: 20px;
-  background-color: darkcyan;
+  background-color: cadetblue;
   border-radius: 10px;
   width: auto;
 }

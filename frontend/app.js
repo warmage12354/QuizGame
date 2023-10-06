@@ -1,31 +1,5 @@
 // Setting up an array of questions to be asked with the answers
-const QuestionList = [
-  {
-    question: "What is a  variable?",
-    answer: [
-      { text: "A type of button", isCorrect: false },
-      { text: " a place to store data", isCorrect: true },
-      { text: "idk", isCorrect: false },
-    ],
-  },
-  {
-    question: "What is a Array?",
-    answer: [
-      { text: "A variable that stores a list of values ", isCorrect: true },
-      { text: " A type of object ", isCorrect: false },
-      { text: "idk", isCorrect: false },
-    ],
-  },
-
-  {
-    question: "What is a function?",
-    answer: [
-      { text: " A type of class  ", isCorrect: false },
-      { text: " A set of statements that perform a job", isCorrect: true },
-      { text: "idk", isCorrect: false },
-    ],
-  },
-];
+import {QuestionList} from "./quizData.js"
 
 // current question is intiailly set to zero and will display the first question
 let currQuestion = 0;
@@ -50,7 +24,8 @@ const loadQuiz = () => {
 
     //sets input to type to a radio button and its name to answer
     choice.type = "radio";
-    choice.name = "answer";
+    choice.name = "answer"; 
+    choiceLabel.setAttribute("id", "selectionsText")
 
     // sets the value to be incremented
     choice.value = i;
