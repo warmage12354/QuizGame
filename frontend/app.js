@@ -12,7 +12,7 @@ const QuestionList = [
     question: "What is a Array?",
     answer: [
       { text: "A variable that stores a list of values ", isCorrect: true },
-      { text: " A tyoe of object ", isCorrect: false },
+      { text: " A type of object ", isCorrect: false },
       { text: "idk", isCorrect: false },
     ],
   },
@@ -31,9 +31,9 @@ const QuestionList = [
 let currQuestion = 0;
 let score = 0;
 
-const loadQuiz = () => { 
+const loadQuiz = () => {
   // sets the variable question equal to h2 element with the id 'Question'
-  const question = document.getElementById("Question"); 
+  const question = document.getElementById("Question");
   // sets the textt of the h2 element equal to the first question
   question.textContent = QuestionList[currQuestion].question;
 
@@ -43,7 +43,6 @@ const loadQuiz = () => {
 
   // adds in the potential answers of the question
   for (let i = 0; i < QuestionList[currQuestion].answer.length; i++) {
-   
     // creates div to put input and label in
     const choicesdiv = document.createElement("div");
     const choice = document.createElement("input");
@@ -55,7 +54,7 @@ const loadQuiz = () => {
 
     // sets the value to be incremented
     choice.value = i;
-    
+
     // runs through and adds all the answers from the object
     choiceLabel.textContent = QuestionList[currQuestion].answer[i].text;
 
@@ -76,11 +75,10 @@ const nextQuestion = () => {
     currQuestion++;
     loadQuiz();
 
-    // if there are no questiosn left print the score
+    // if there are no questions left print the score
   } else {
-    alert("You Got a score of " + score + " out of  " + QuestionList.length);
     // reloads webpage
-    location.reload();
+    resetQuiz();
   }
 };
 
@@ -95,8 +93,6 @@ const checkAnswer = () => {
     nextQuestion();
     console.log("is Correct");
 
-    console.log(score);
-  
     // goes to the next question without any points
   } else {
     console.log("is not correct");
@@ -104,14 +100,26 @@ const checkAnswer = () => {
   }
 };
 
-const resetQuiz = () => { 
+const resetQuiz = () => {
+  const question = document.getElementById("Question");
+  const submitButton = document.getElementById("SubmitButton");
+  submitButton.remove();
 
+  question.textContent = "Reset?";
+  document.getElementById("options").innerHTML =
+    "You got a score of " + score + " out of  " + QuestionList.length;
+
+  const resetBtn = document.createElement("button");
+
+  resetBtn.setAttribute("id", "resetButton");
+  resetBtn.textContent = "Reset";
+
+  options.appendChild(resetBtn);
+
+  resetBtn.addEventListener("click", () => {
+
+    location.reload();
   
-
-
-
-
-
-}
-
-
+  
+  });
+};

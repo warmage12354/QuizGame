@@ -30,7 +30,7 @@ h1 {
   margin: 10px;
 }
 
-#SubmitButton {
+#SubmitButton,#resetButton {
   margin: 10px;
   border: none;
   padding: 20px;
