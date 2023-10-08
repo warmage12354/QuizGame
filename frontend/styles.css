@@ -7,7 +7,8 @@ h1 {
   background-color:cadetblue;  
   border-radius: 20px;
   
-}
+} 
+
 
 .quizHolder {
   margin-top: 90px;
@@ -30,14 +31,27 @@ h1 {
 
 .quizContent {
   padding: 20px;
+} 
+
+
+#options {  
+  text-align: left;
+  
+  }
+
+#selection { 
+
+  cursor: pointer; 
+
 }
 
 #selectionsText { 
 
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family:Georgia, 'Times New Roman', Times, serif; 
   
+} 
 
-}
+
 
 
 #SubmitButton,#resetButton {

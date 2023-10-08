@@ -1,6 +1,6 @@
 // Setting up an array of questions to be asked with the answers
 const QuestionList = [
-  {
+  { 
     question: "What is a  variable?",
     answer: [
       { text: "A type of button", isCorrect: false },
@@ -53,7 +53,8 @@ const loadQuiz = () => {
     //sets input to type to a radio button and its name to answer
     choice.type = "radio";
     choice.name = "answer"; 
-    choiceLabel.setAttribute("id", "selectionsText")
+    choice.setAttribute("id", "selection" )
+    choiceLabel.setAttribute("id", "selectionsText") 
 
     // sets the value to be incremented
     choice.value = i;
