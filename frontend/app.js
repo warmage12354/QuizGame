@@ -1,4 +1,5 @@
-// Setting up an array of questions to be asked with the answers
+// Setting up an array of questions to be asked with the answers 
+// new comment
 const QuestionList = [
   { 
     question: "What is a  variable?",
