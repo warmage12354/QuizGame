@@ -63,6 +63,10 @@ const loadQuiz = () => {
     // runs through and adds all the answers from the object
     choiceLabel.textContent = QuestionList[currQuestion].answer[i].text;
 
+    // gives choicesDiv an id 
+    choicesdiv.setAttribute("id","Choices")
+
+
     //adds all the elements to the screen
     choicesdiv.appendChild(choice);
     choicesdiv.appendChild(choiceLabel);
@@ -117,6 +121,8 @@ const resetQuiz = () => {
   // sets the contents of option to the score the user got
   document.getElementById("options").innerHTML =
     "You got a score of " + score + " out of  " + QuestionList.length;
+
+
 
 
   const resetBtn = document.createElement("button");

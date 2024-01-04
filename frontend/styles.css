@@ -10,27 +10,29 @@ h1 {
 } 
 
 
-.quizHolder {
-  margin-top: 90px;
-  position: relative;
-  left: 42%;
+.quizHolder { 
+  min-width: 50%;
+  margin-top: 1%;
+  position: absolute; 
+  left: 25%;
   display: inline-block;
   text-align: center;
   background-color:powderblue;
   border-style: solid; 
-  border-radius: 10px; 
+  border-radius: 1%; 
   
 }
 
 .quizHeader {
   background-color:cadetblue;
-  padding: 10px;  
+  padding: 1%;  
   border-top-right-radius: 5px; 
-  border-top-left-radius: 5px;
+  border-top-left-radius: 5px; 
+  font-size: xx-large;
 } 
 
 .quizContent {
-  padding: 20px;
+  padding: 10%;
 } 
 
 
@@ -39,10 +41,37 @@ h1 {
   
   }
 
-#selection { 
+#Choices { 
 
+  width: fit-content; 
+  font-size:xx-large;  
+  padding: 4%; 
+}
+
+input { 
   cursor: pointer; 
+  appearance: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 30px;
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  position: relative;
+  
 
+
+} 
+
+input:checked { 
+ 
+  background-color: #5072A7;
+
+}
+
+input:hover { 
+
+  background-color: #5072A7;
 }
 
 #selectionsText { 
@@ -57,8 +86,21 @@ h1 {
 #SubmitButton,#resetButton {
   margin: 10px;
   border: none;
-  padding: 20px;
+  padding: 5%; 
   background-color: cadetblue;
   border-radius: 10px;
-  width: auto;
+  width: auto; 
+  cursor: pointer; 
+  position: absolute; 
+  bottom: 0%; 
+  right:40%; 
+  transition: 0.2s all linear;
+
+}
+
+#SubmitButton:hover,#resetButton:hover { 
+
+  background-color:#5072A7 ;
+
+
 }
