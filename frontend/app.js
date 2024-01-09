@@ -50,12 +50,13 @@ const loadQuiz = () => {
     const choicesdiv = document.createElement("div");
     const choice = document.createElement("input");
     const choiceLabel = document.createElement("label");
-
+    const choiceDiv = document.createElement("div")
     //sets input to type to a radio button and its name to answer
     choice.type = "radio";
     choice.name = "answer"; 
     choice.setAttribute("id", "selection" )
-    choiceLabel.setAttribute("id", "selectionsText") 
+    choiceLabel.setAttribute("id", "selectionsText")  
+    choiceLabel.setAttribute("for","selection")
 
     // sets the value to be incremented
     choice.value = i;
@@ -67,10 +68,12 @@ const loadQuiz = () => {
     choicesdiv.setAttribute("id","Choices")
 
 
-    //adds all the elements to the screen
-    choicesdiv.appendChild(choice);
-    choicesdiv.appendChild(choiceLabel);
-    options.appendChild(choicesdiv);
+    //adds all the elements to the screen 
+    choiceDiv.appendChild(choice) 
+    choiceDiv.appendChild(choiceLabel)
+    options.appendChild(choiceDiv) 
+    
+   
   }
 };
 
@@ -112,6 +115,8 @@ const checkAnswer = () => {
 // resets the quiz
 const resetQuiz = () => {
   
+  let quizCont = document.getElementById("quizContent")
+
   // gets the element then removes it
   const submitButton = document.getElementById("SubmitButton");
   submitButton.remove();
@@ -130,7 +135,7 @@ const resetQuiz = () => {
   resetBtn.setAttribute("id", "resetButton");
   resetBtn.textContent = "Reset";
 
-  options.appendChild(resetBtn);
+  quizCont.appendChild(resetBtn);
 
   resetBtn.addEventListener("click", () => {
 

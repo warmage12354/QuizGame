@@ -32,21 +32,28 @@ h1 {
 } 
 
 .quizContent {
-  padding: 10%;
+  padding: 10%; 
+  width: fit-content; 
+  height: fit-content;
 } 
 
+input[type="radio"] {
+  vertical-align: baseline;
+}
 
 #options {  
   text-align: left;
+  width: fit-content; 
+  font-size:xx-large;  
+  padding: 4%;  
+  display: flex; 
+  flex-direction: column; 
+  left: 30%; 
+  margin-bottom: 20%;
+  position: relative;
   
   }
 
-#Choices { 
-
-  width: fit-content; 
-  font-size:xx-large;  
-  padding: 4%; 
-}
 
 input { 
   cursor: pointer; 
@@ -84,7 +91,8 @@ input:hover {
 
 
 #SubmitButton,#resetButton {
-  margin: 10px;
+  margin-top: 50%; 
+  margin-bottom: 1%;
   border: none;
   padding: 5%; 
   background-color: cadetblue;
