@@ -115,7 +115,7 @@ const checkAnswer = () => {
 // resets the quiz
 const resetQuiz = () => {
   
-  let quizCont = document.getElementById("quizContent")
+  let options = document.getElementById("options")
 
   // gets the element then removes it
   const submitButton = document.getElementById("SubmitButton");
@@ -135,7 +135,7 @@ const resetQuiz = () => {
   resetBtn.setAttribute("id", "resetButton");
   resetBtn.textContent = "Reset";
 
-  quizCont.appendChild(resetBtn);
+  options.appendChild(resetBtn);
 
   resetBtn.addEventListener("click", () => {
 

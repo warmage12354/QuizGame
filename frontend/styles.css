@@ -7,7 +7,22 @@ h1 {
   background-color:cadetblue;  
   border-radius: 20px;
   
-} 
+}  
+
+#menuContainer {  
+  width: fit-content;
+  border: solid cadetblue ;
+  display: flex; 
+  flex-direction: column;
+  position: absolute; 
+  left: 50%; 
+  bottom: 50%; 
+
+}
+
+
+
+
 
 
 .quizHolder { 
@@ -31,11 +46,7 @@ h1 {
   font-size: xx-large;
 } 
 
-.quizContent {
-  padding: 10%; 
-  width: fit-content; 
-  height: fit-content;
-} 
+
 
 input[type="radio"] {
   vertical-align: baseline;
@@ -47,10 +58,10 @@ input[type="radio"] {
   font-size:xx-large;  
   padding: 4%;  
   display: flex; 
-  flex-direction: column; 
-  left: 30%; 
-  margin-bottom: 20%;
-  position: relative;
+  flex-direction: column;  
+  margin-top: 5%;
+  margin-left: 25%;
+  position: relative; 
   
   }
 
@@ -87,26 +98,39 @@ input:hover {
   
 } 
 
+#menuButton { 
+
+  border: none;
+  padding: 30%; 
+  background-color: cadetblue; 
+  margin:auto;
+  width:100px;
+  transition: 0.2s all linear; 
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+
 
 
 
 #SubmitButton,#resetButton {
-  margin-top: 50%; 
+  margin-top: 5%;
   margin-bottom: 1%;
   border: none;
   padding: 5%; 
   background-color: cadetblue;
   border-radius: 10px;
-  width: auto; 
+  width: 50%; 
+  height: 50%; 
   cursor: pointer; 
-  position: absolute; 
-  bottom: 0%; 
-  right:40%; 
+   
   transition: 0.2s all linear;
 
 }
 
-#SubmitButton:hover,#resetButton:hover { 
+#SubmitButton:hover,#resetButton:hover, #menuButton:hover { 
 
   background-color:#5072A7 ;
 
