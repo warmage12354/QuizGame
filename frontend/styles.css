@@ -15,9 +15,9 @@ h1 {
   display: flex; 
   flex-direction: column;
   position: absolute; 
-  left: 50%; 
-  bottom: 50%; 
-
+  left: 35%; 
+   
+  padding: 3%;
 }
 
 
@@ -47,6 +47,17 @@ h1 {
 } 
 
 
+#quizSelector { 
+
+  border: solid; 
+  display: flex; 
+  flex-direction: column;
+  width: 20%; 
+  height: fit-content; 
+  position: absolute; 
+  left: 35%; 
+  
+}
 
 input[type="radio"] {
   vertical-align: baseline;
@@ -103,15 +114,38 @@ input:hover {
   border: none;
   padding: 30%; 
   background-color: cadetblue; 
-  margin:auto;
-  width:100px;
+  margin-bottom: 4% ;
+  width:300px;
   transition: 0.2s all linear; 
   cursor: pointer;
   border-radius: 10px;
+  font-size: larger;
+  font-family:Georgia, 'Times New Roman', Times, serif; 
 
 }
 
+#selectButton { 
 
+padding: 30%; 
+background-color: cadetblue;
+transition: 0.2s all linear;
+cursor: pointer;
+font-size: larger; 
+font-family:Georgia, 'Times New Roman', Times, serif; 
+
+} 
+
+#backButton { 
+
+  padding: 2%; 
+  width: 10%;
+  font-family:Georgia, 'Times New Roman', Times, serif; 
+  font-size: larger; 
+  background-color: cadetblue;
+  transition: 0.2s all linear;
+  cursor: pointer;
+
+}
 
 
 
@@ -130,7 +164,7 @@ input:hover {
 
 }
 
-#SubmitButton:hover,#resetButton:hover, #menuButton:hover { 
+#SubmitButton:hover,#resetButton:hover, #menuButton:hover, #selectButton:hover, #backButton:hover { 
 
   background-color:#5072A7 ;
 
