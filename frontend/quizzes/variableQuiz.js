@@ -1,4 +1,4 @@
-const QuestionList = [
+export const variableQuiz = () => [
     { 
       question: "What is a  variable?",
       answer: [

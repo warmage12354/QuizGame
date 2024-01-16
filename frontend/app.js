@@ -1,34 +1,32 @@
 // Setting up an array of questions to be asked with the answers 
 // new comment
-const QuestionList = [
-  { 
-    question: "What is a  variable?",
-    answer: [
-      { text: "A type of button", isCorrect: false },
-      { text: " a place to store data", isCorrect: true },
-      { text: "idk", isCorrect: false },
-    ],
-  },
-  {
-    question: "What is a Array?",
-    answer: [
-      { text: "A variable that stores a list of values ", isCorrect: true },
-      { text: " A type of object ", isCorrect: false },
-      { text: "idk", isCorrect: false },
-    ],
-  },
-
-  {
-    question: "What is a function?",
-    answer: [
-      { text: " A type of class  ", isCorrect: false },
-      { text: " A set of statements that perform a job", isCorrect: true },
-      { text: "idk", isCorrect: false },
-    ],
-  },
-]; 
+import {getArrayQuiz} from "./insertQuiz.js";
 
 
+const QuestionList = getArrayQuiz(); 
+
+let submitButton = document.querySelector(".Submit-Button")
+
+submitButton.addEventListener('click', () => { 
+
+  const selectedAnswer = parseInt(
+    document.querySelector('input[name="answer"]:checked').value
+  );
+
+  // if it is correct the score goes up and it goes to the next question
+  if (QuestionList[currQuestion].answer[selectedAnswer].isCorrect) {
+    score++;
+    nextQuestion();
+    console.log("is Correct");
+
+    // goes to the next question without any points
+  } else {
+    console.log("is not correct");
+    nextQuestion();
+  }
+
+
+} )
 
 // current question is intiailly set to zero and will display the first question
 let currQuestion = 0;
@@ -45,6 +43,10 @@ const loadQuiz = () => {
   options.innerHTML = "";
 
   // adds in the potential answers of the question
+
+
+
+
   for (let i = 0; i < QuestionList[currQuestion].answer.length; i++) {
     // creates div to put input and label in
     const choicesdiv = document.createElement("div");
@@ -80,11 +82,14 @@ const loadQuiz = () => {
 // loads the quiz after
 loadQuiz();
 
+
+
+
 // fucntion that will laod the next question
 const nextQuestion = () => {
   // if there are still questions in the array then load the next question
   if (currQuestion < QuestionList.length - 1) {
-    currQuestion++;
+    currQuestion++; 
     loadQuiz();
 
     // if there are no questions left print the score
@@ -94,23 +99,7 @@ const nextQuestion = () => {
   }
 };
 
-const checkAnswer = () => {
-  const selectedAnswer = parseInt(
-    document.querySelector('input[name="answer"]:checked').value
-  );
 
-  // if it is correct the score goes up and it goes to the next question
-  if (QuestionList[currQuestion].answer[selectedAnswer].isCorrect) {
-    score++;
-    nextQuestion();
-    console.log("is Correct");
-
-    // goes to the next question without any points
-  } else {
-    console.log("is not correct");
-    nextQuestion();
-  }
-};
 
 // resets the quiz
 const resetQuiz = () => {

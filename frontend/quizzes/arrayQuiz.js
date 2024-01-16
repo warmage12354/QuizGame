@@ -1,10 +1,13 @@
-const arrayQuestions = [
-    { 
-      question: "What is a  variable?",
+ export  const arrayQuestions =  
+ 
+
+  [ 
+    {  
+      question: "The size of the array should always be",
       answer: [
-        { text: "A type of button", isCorrect: false },
-        { text: " a place to store data", isCorrect: true },
-        { text: "idk", isCorrect: false },
+        { text: "Positive", isCorrect: true },
+        { text: "Negative", isCorrect: false },
+        { text: "whole Number", isCorrect: false },
       ],
     },
     {
@@ -17,12 +20,16 @@ const arrayQuestions = [
     },
   
     {
-      question: "What is a function?",
+      question: "With the help of which operator array elements can be accessed?",
       answer: [
-        { text: " A type of class  ", isCorrect: false },
-        { text: " A set of statements that perform a job", isCorrect: true },
-        { text: "idk", isCorrect: false },
+        { text: " Parenthesis ( )", isCorrect: false },
+        { text: " Braces {}", isCorrect: false },
+        { text: "Subscript Operator[]", isCorrect: true },
       ],
     },
   ]; 
   
+
+ 
+ 
+ 

@@ -1,10 +1,10 @@
-const QuestionList = [
+export const methodQuestions = () => [
     { 
-      question: "What is a  variable?",
+      question: "Which method removes the last element from an array and returns that element?",
       answer: [
-        { text: "A type of button", isCorrect: false },
-        { text: " a place to store data", isCorrect: true },
-        { text: "idk", isCorrect: false },
+        { text: "pop()", isCorrect: false },
+        { text: "shift", isCorrect: true },
+        { text: "unshift", isCorrect: false },
       ],
     },
     {
