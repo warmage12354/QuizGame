@@ -1,11 +1,13 @@
 // Setting up an array of questions to be asked with the answers 
 // new comment
-import {getArrayQuiz} from "./insertQuiz.js";
+import {chooseQuiz} from "../quizLogic/insertQuiz.js";
 
 
-const QuestionList = getArrayQuiz(); 
+// sets QuestionList equal to the array choosen by chooseQuiz
+const QuestionList = chooseQuiz(); 
 
-let submitButton = document.querySelector(".Submit-Button")
+// gets submitButton from index.html
+let submitButton = document.getElementById("SubmitButton")
 
 submitButton.addEventListener('click', () => { 
 

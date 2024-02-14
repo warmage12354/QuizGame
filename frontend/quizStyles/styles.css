@@ -27,7 +27,7 @@ h1 {
 
 
 
-.quizHolder { 
+#quizHolder { 
   min-width: 50%;
   margin-top: 1%;
   position: absolute; 
@@ -40,7 +40,7 @@ h1 {
   
 }
 
-.quizHeader {
+#quizHeader {
   background-color:cadetblue;
   padding: 1%;  
   border-top-right-radius: 5px; 
@@ -111,7 +111,7 @@ input:hover {
   
 } 
 
-#menuButton { 
+.menuButton { 
 
   border: none;
   padding: 30%; 
@@ -126,7 +126,7 @@ input:hover {
 
 }
 
-#selectButton { 
+.selectButton { 
 
   width: 100%;
   height: 100%;
@@ -169,7 +169,7 @@ font-family:Georgia, 'Times New Roman', Times, serif;
 
 }
 
-#SubmitButton:hover,#resetButton:hover, #menuButton:hover, #selectButton:hover, #backButton:hover { 
+#SubmitButton:hover,#resetButton:hover, .menuButton:hover, .selectButton:hover, #backButton:hover { 
 
   background-color:#5072A7 ;
 
