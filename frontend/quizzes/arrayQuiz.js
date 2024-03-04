@@ -26,7 +26,25 @@
         { text: " Braces {}", isCorrect: false },
         { text: "Subscript Operator[]", isCorrect: true },
       ],
+    }, 
+    {
+      question: "Which method adds a new item to the end of an array?",
+      answer: [
+        { text: "Unshift", isCorrect: false },
+        { text: "push()", isCorrect: true },
+        { text: "pop()", isCorrect: false },
+      ],
     },
+    {
+      question: "Which method creates a new array based on a selection?",
+      answer: [
+        { text: "appendChild()", isCorrect: false },
+        { text: "shift()", isCorrect: false },
+        { text: "slice()", isCorrect: true },
+      ],
+    },
+
+
   ]; 
   
 

@@ -1,5 +1,5 @@
 body {
-  background-color:whitesmoke
+  background-color: whitesmoke
 }
 
 h1 {
@@ -17,10 +17,15 @@ h1 {
 
 
 #quizHolder { 
-  min-width: 50%;
-  margin-top: 1%;
-  position: absolute; 
-  left: 25%;
+  min-height: 40%; 
+  min-width: 40%;
+  max-width: 50%; 
+  max-height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   display: inline-block;
   text-align: center;
   background-color:powderblue;
@@ -37,16 +42,26 @@ h1 {
   font-size: xx-large;
 } 
 
+#quizSelectionContainer { 
+  position: absolute;
+  overflow: hidden;
+  min-width: 90%; 
+  min-height: 90%;  
+  object-fit: cover; 
+}
 
-#quizSelector { 
-
+#quizSelector {  
+  
+  margin: auto;
   border-bottom: solid ;
   display: flex; 
   flex-direction: column;
-  width: 20%;
-  height: 20%;
+  min-width: 15vw;
+  min-height: 20vh;
   position: absolute;
-  left: 40%;  
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
   
 }
 
@@ -54,16 +69,17 @@ input[type="radio"] {
   vertical-align: baseline;
 }
 
-#options {  
+#options {   
   text-align: left;
   width: fit-content; 
+  height: fit-content;
   font-size:xx-large;  
-  padding: 4%;  
+    
   display: flex; 
-  flex-direction: column;  
-  margin-top: 5%;
-  margin-left: 25%;
-  position: relative; 
+  flex-direction: column;   
+  margin-left: 25%; 
+  margin-top: 2% ;
+  position: relative;
   
   }
 
@@ -132,7 +148,8 @@ font-family:Georgia, 'Times New Roman', Times, serif;
 
 
 
-#SubmitButton,#resetButton {
+#SubmitButton {
+  
   margin-top: 5%;
   margin-bottom: 1%;
   border: none;
@@ -144,6 +161,17 @@ font-family:Georgia, 'Times New Roman', Times, serif;
   cursor: pointer; 
    
   transition: 0.2s all linear;
+
+} 
+
+#resetButton { 
+  padding: 5%; 
+  border-radius: 10px;  
+  position: relative;
+  background-color: cadetblue;
+  transition: 0.2s all linear; 
+  cursor: pointer;
+ 
 
 }
 

@@ -1,10 +1,14 @@
 // Setting up an array of questions to be asked with the answers 
 // new comment
-import {chooseQuiz} from "../quizLogic/insertQuiz.js";
 
+  // parse the stringfied object back to its original form
+  let TheQuiz = JSON.parse(localStorage.getItem('theQuiz'));
 
 // sets QuestionList equal to the array choosen by chooseQuiz
-const QuestionList = chooseQuiz(); 
+const QuestionList = TheQuiz;
+
+
+  
 
 // gets submitButton from index.html
 let submitButton = document.getElementById("SubmitButton")
@@ -45,7 +49,6 @@ const loadQuiz = () => {
   options.innerHTML = "";
 
   // adds in the potential answers of the question
-
 
 
 

@@ -8,21 +8,37 @@ export const variableQuestions =  [
       ],
     },
     {
-      question: "What is a Array?",
+      question: "Which of the following is NOT a primitive data type in JavaScript",
       answer: [
-        { text: "A variable that stores a list of values ", isCorrect: true },
-        { text: " A type of object ", isCorrect: false },
-        { text: "idk", isCorrect: false },
+        { text: "Object", isCorrect: true },
+        { text: "Number", isCorrect: false },
+        { text: "Boolean", isCorrect: false },
       ],
     },
   
     {
-      question: "What is a function?",
+      question: "What does a variable in JavaScript hold when its assigned an object?",
       answer: [
-        { text: " A type of class  ", isCorrect: false },
-        { text: " A set of statements that perform a job", isCorrect: true },
-        { text: "idk", isCorrect: false },
+        { text: "The object's value", isCorrect: false },
+        { text: "A copy of the object", isCorrect: false },
+        { text: "A reference (pointer) to the object in memory", isCorrect: true },
       ],
     },
+    {
+      question: "What are the keywords used to declare a variable in JavaScript?",
+      answer: [
+        { text: "Let", isCorrect: false },
+        { text: "const", isCorrect: false },
+        { text: "all the above", isCorrect: true },
+      ],
+    }, 
+    {
+      question: "Which of the following is NOT a valid variable name in JavaScript?",
+      answer: [
+        { text: "1count", isCorrect: true },
+        { text: "$price", isCorrect: false },
+        { text: "_value", isCorrect: false },
+      ],
+    }
   ]; 
   
