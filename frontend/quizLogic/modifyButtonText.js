@@ -17,7 +17,7 @@ console.log('userScore is : ' + userScore)
 console.log('totalQuestions is : ' + totalQuestions)
 console.log('averageScore is : ' + averageScore)
 
-// sets the text of the button and displays the average score
-arrButtonText.innerText = "Array Quiz " + "Average Score : " + averageScore
-varButtonText.innerText = "Variable Quiz " + "Average Score : " + averageScore
-methodButtonText.innerText = "Method Quiz " + "Average Score : " + averageScore
+// sets the text of the button and will eventaully display the correct average
+arrButtonText.innerText = "Array Quiz "
+varButtonText.innerText = "Variable Quiz"
+methodButtonText.innerText = "Method Quiz"   

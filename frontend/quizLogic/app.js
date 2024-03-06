@@ -7,7 +7,7 @@
 // sets QuestionList equal to the array choosen by chooseQuiz
 const QuestionList = TheQuiz;
 
-// gets ele
+// gets button elements
 let backButton = document.getElementById("backButton"); 
 let popUpWindow = document.querySelector('.popUpWindow');
 let quizHolder = document.getElementById('quizHolder');
@@ -169,8 +169,10 @@ const nextQuestion = () => {
 
 // resets the quiz
 const resetQuiz = () => {
+  let lengthOfQuestions = QuestionList.length 
 
-     let lengthOfQuestions = QuestionList.length
+     console.log(lengthOfQuestions)
+     
      localStorage.getItem('numberQuestions',JSON.stringify(lengthOfQuestions))
 
     localStorage.setItem('score',JSON.stringify(score))

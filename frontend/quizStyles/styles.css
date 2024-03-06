@@ -64,14 +64,13 @@ h1 {
   position: absolute;
   overflow: hidden;
   min-width: 90%; 
-  min-height: 100%;  
+  min-height: 90%;  
   object-fit: cover; 
 }
 
 #quizSelector {  
   
   margin: auto;
-  border-bottom: solid ;
   display: flex; 
   flex-direction: column;
   min-width: 15vw;
@@ -84,15 +83,20 @@ h1 {
 } 
 .selectButton { 
 
-width: 90%;
+width: 100%;
 height: 100%;
 padding: 20%; 
 background-color: cadetblue;
 transition: 0.2s all linear;
 cursor: pointer;
-font-size: large; 
+font-size: larger; 
 font-family:Georgia, 'Times New Roman', Times, serif; 
 
+} 
+#selectionsText { 
+
+  font-family:Georgia, 'Times New Roman', Times, serif; 
+  
 } 
 
 
@@ -110,7 +114,7 @@ input[type="radio"] {
   flex-direction: column;   
   margin-left: 25%; 
   margin-top: 2% ;
-  position: relative;
+  position: relative; 
   
   }
 
@@ -141,11 +145,6 @@ input:hover {
   background-color: #5072A7;
 }
 
-#selectionsText { 
-
-  font-family:Georgia, 'Times New Roman', Times, serif; 
-  
-} 
 
 
 
@@ -183,13 +182,14 @@ input:hover {
 } 
 
 #resetButton { 
-  padding: 5%; 
+  padding: 15%; 
+  width: 100%; 
+  height: 50%;
   border-radius: 10px;  
-  position: relative;
   background-color: cadetblue;
   transition: 0.2s all linear; 
   cursor: pointer;
- 
+  margin-top: 10%;
 
 }
 
