@@ -7,6 +7,46 @@
 // sets QuestionList equal to the array choosen by chooseQuiz
 const QuestionList = TheQuiz;
 
+// gets ele
+let backButton = document.getElementById("backButton"); 
+let popUpWindow = document.querySelector('.popUpWindow');
+let quizHolder = document.getElementById('quizHolder');
+
+let cancelButton = document.getElementById('cancel')
+let confirmButton = document.getElementById('confirm');
+
+backButton.addEventListener('click', () => { 
+
+  if(currQuestion > 0 ) { 
+
+    popUpWindow.style.display = "block";
+    quizHolder.style.display = 'none'
+
+  }
+
+  else { 
+
+    location.href = "../quizStyles/quizSelection.html"
+
+    
+  }
+
+
+})
+
+  cancelButton.addEventListener('click', () => { 
+
+    popUpWindow.style.display = 'none';
+    quizHolder.style.display ='inline-block'
+
+  } )
+
+  confirmButton.addEventListener('click', () => { 
+
+        location.href = "../quizStyles/quizSelection.html"
+
+
+  } )
 
   
 
@@ -15,21 +55,40 @@ let submitButton = document.getElementById("SubmitButton")
 
 submitButton.addEventListener('click', () => { 
 
-  const selectedAnswer = parseInt(
-    document.querySelector('input[name="answer"]:checked').value
-  );
+  // checks to see if user selected a option
+  try{ 
+    const selectedAnswer = parseInt(
+      document.querySelector('input[name="answer"]:checked').value
+      ); 
+  
+ // if it is correct the score goes up and it goes to the next question
+ if(QuestionList[currQuestion].answer[selectedAnswer].isCorrect) {
+  score++;
+  nextQuestion();
 
-  // if it is correct the score goes up and it goes to the next question
-  if (QuestionList[currQuestion].answer[selectedAnswer].isCorrect) {
-    score++;
-    nextQuestion();
-    console.log("is Correct");
+ 
+} 
 
-    // goes to the next question without any points
-  } else {
-    console.log("is not correct");
-    nextQuestion();
+
+ 
+ // goes to the next question without any points
+else {
+
+  nextQuestion();
+
+}
+
+  } 
+
+  // catches error if the user did not
+  catch(err) { 
+
+    alert("Must select an answer!")
+  
   }
+  
+
+ 
 
 
 } )
@@ -90,6 +149,8 @@ loadQuiz();
 
 
 
+
+
 // fucntion that will laod the next question
 const nextQuestion = () => {
   // if there are still questions in the array then load the next question
@@ -108,7 +169,13 @@ const nextQuestion = () => {
 
 // resets the quiz
 const resetQuiz = () => {
-  
+
+     let lengthOfQuestions = QuestionList.length
+     localStorage.getItem('numberQuestions',JSON.stringify(lengthOfQuestions))
+
+    localStorage.setItem('score',JSON.stringify(score))
+
+
   let options = document.getElementById("options")
 
   // gets the element then removes it

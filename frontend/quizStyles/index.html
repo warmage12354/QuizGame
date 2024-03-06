@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head> 
-
+    <style>html{visibility: hidden;opacity:0;}</style>
     <title>JavaScript Quiz</title>
   </head> 
 
   <body>
     <h1>How Much Do you Know About JavaScript</h1> 
     
-    <a href="quizSelection.html"> 
+     
 
       <button id = "backButton" >  Back</button>
 
-    </a>
+    <div class="popUpWindow"> 
+
+      <h1>Quiz incomplete, still go back?</h1>
+
+      <button class="selectButton" id = "confirm">Yes</button> 
+      <button class = "selectButton" id = "cancel"> No </button>
+
+
+    </div>
+
+
+
 
     <div id="quizHolder">
       <div id="quizHeader"><h2 id="Question"></h2></div>
