@@ -4,13 +4,13 @@ html {
 }
 body {
 
-  background-color: #E1EBEE;
+  background-color: #86DEB7;
  
 }
 
 h1 {
   text-align: center;
-  background-color:cadetblue;  
+  background-color: #63B995;  
   border-radius: 20px;
   
 }  
@@ -41,7 +41,7 @@ h1 {
 }
 
 #quizHeader {
-  background-color:cadetblue;
+  background-color: #63B995;
   padding: 1%;  
   border-top-right-radius: 5px; 
   border-top-left-radius: 5px; 
@@ -81,12 +81,18 @@ h1 {
   -webkit-transform: translate(-50%, -50%);
   
 } 
+
+
 .selectButton { 
 
-width: 100%;
-height: 100%;
+min-width: 100%;
+min-height: 100%;
 padding: 20%; 
-background-color: cadetblue;
+background-color: #63B995; 
+border: solid; 
+font-weight: bold;  
+border-radius: 15%;
+margin: 5%;
 transition: 0.2s all linear;
 cursor: pointer;
 font-size: larger; 
@@ -136,13 +142,13 @@ input {
 
 input:checked { 
  
-  background-color: #5072A7;
+  background-color: #63B995;
 
 }
 
 input:hover { 
 
-  background-color: #5072A7;
+  background-color: #63B995;
 }
 
 
@@ -152,12 +158,12 @@ input:hover {
 
 
 #backButton { 
-
+  font-weight: bold;  
   padding: 2%; 
   width: 10%;
   font-family:Georgia, 'Times New Roman', Times, serif; 
   font-size: larger; 
-  background-color: cadetblue;
+  background-color: #63B995;
   transition: 0.2s all linear;
   cursor: pointer;
 
@@ -171,7 +177,7 @@ input:hover {
   margin-bottom: 1%;
   border: none;
   padding: 5%; 
-  background-color: cadetblue;
+  background-color: #63B995;
   border-radius: 10px;
   width: 50%; 
   height: 50%; 
@@ -181,21 +187,23 @@ input:hover {
 
 } 
 
-#resetButton { 
-  padding: 15%; 
+.resetButtons { 
+  padding: 10%; 
   width: 100%; 
-  height: 50%;
+  height: 40%;
   border-radius: 10px;  
-  background-color: cadetblue;
+  background-color: #63B995; 
+  font-weight: bold; 
+  border: solid;
   transition: 0.2s all linear; 
   cursor: pointer;
-  margin-top: 10%;
+  margin-top: 2%;
 
 }
 
-#SubmitButton:hover,#resetButton:hover, .selectButton:hover, #backButton:hover { 
+#SubmitButton:hover,.resetButtons:hover, .selectButton:hover, #backButton:hover { 
 
-  background-color:#5072A7 ;
+  background-color:#ADEEE3;
 
 
 }

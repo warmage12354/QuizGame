@@ -15,12 +15,17 @@ let quizHolder = document.getElementById('quizHolder');
 let cancelButton = document.getElementById('cancel')
 let confirmButton = document.getElementById('confirm');
 
+
+let totalScore = 0
+let lengthOfQuestions = 0;
+
 backButton.addEventListener('click', () => { 
 
   if(currQuestion > 0 ) { 
 
     popUpWindow.style.display = "block";
-    quizHolder.style.display = 'none'
+    quizHolder.style.display = 'none' 
+    backButton.style.display = 'none'
 
   }
 
@@ -37,7 +42,9 @@ backButton.addEventListener('click', () => {
   cancelButton.addEventListener('click', () => { 
 
     popUpWindow.style.display = 'none';
-    quizHolder.style.display ='inline-block'
+    quizHolder.style.display ='inline-block' 
+    backButton.style.display = 'inline-block'
+
 
   } )
 
@@ -166,23 +173,29 @@ const nextQuestion = () => {
 };
 
 
-
 // resets the quiz
 const resetQuiz = () => {
-  let lengthOfQuestions = QuestionList.length 
 
-     console.log(lengthOfQuestions)
-     
-     localStorage.getItem('numberQuestions',JSON.stringify(lengthOfQuestions))
 
-    localStorage.setItem('score',JSON.stringify(score))
+  
+    totalScore +=score; 
+    lengthOfQuestions+=QuestionList.length;
+
+    console.log(totalScore); 
+    console.log(lengthOfQuestions);
+
+    localStorage.setItem('numberQuestions',JSON.stringify(lengthOfQuestions))
+    localStorage.setItem('score',JSON.stringify(totalScore))
 
 
   let options = document.getElementById("options")
 
   // gets the element then removes it
   const submitButton = document.getElementById("SubmitButton");
-  submitButton.remove();
+  submitButton.remove(); 
+
+  backButton.remove();
+
   //Sets the header to the question "Reset?"
   const question = document.getElementById("Question");
   question.textContent = "Reset?"; 
@@ -194,16 +207,32 @@ const resetQuiz = () => {
 
 
   const resetBtn = document.createElement("button");
+  const goHome = document.createElement("button"); 
+  goHome.setAttribute("class","resetButtons")
+  resetBtn.setAttribute("class", "resetButtons"); 
 
-  resetBtn.setAttribute("id", "resetButton");
+  goHome.textContent = "Go Home?"
   resetBtn.textContent = "Reset";
 
   options.appendChild(resetBtn);
-
+  options.appendChild(goHome)
+  
+  
   resetBtn.addEventListener("click", () => {
 
     location.reload();
   
   
-  });
+  }); 
+
+
+  goHome.addEventListener("click",() => { 
+
+
+    location.href = "../quizStyles/quizSelection.html"
+
+
+  })
+
+
 };
