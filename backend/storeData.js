@@ -10,16 +10,39 @@ const db = new sqlite3.Database('./database.db',sqlite3.OPEN_READWRITE,(err)=> {
 
 
  // create table       
-sql = 'Create TABLE Quiz(totalNumberCorrect int,totalNumberWrong int ,Average int ) ' 
-db.run(sql)
 
-//Drop Table
-db.run("DROP TABLE users") 
+const createTable = () =>  { 
+    sql = 'CREATE TABLE Quiz(totalNumberCorrect INTEGER,totalNumber INTEGER) ' 
+    db.run(sql)
+    
+
+}
+ 
+const getAverage = () => { 
+
+sql= 'SELECT AVG(totalNumberCorrect/totalNumber) AS Average FROM Quiz  '
+
+
+}
+
+//Drop Table 
+
+const dropTable = () => { 
+    db.run("DROP TABLE Quiz") 
+}
+
 
 
 //insert data into table  
 
-sql = 'Insert INTO Quiz(totalNumberCorrect,totalNumberWrong,Average) VALUES (?,?,?)' 
-db.run(sql,[],(err)=> { 
-    if(err) return console.error(err.message)
-})
+const insertData = (correct,numberOfQuestions) => { 
+
+    sql = 'Insert INTO Quiz(totalNumberCorrect,totalNumberWrong,Average) VALUES (?,?,?)' 
+    db.run(sql,[],(err)=> { 
+        if(err) return console.error(err.message)
+    })
+
+
+}
+
+createTable()
