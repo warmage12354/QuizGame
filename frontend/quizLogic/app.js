@@ -172,20 +172,37 @@ const nextQuestion = () => {
   }
 };
 
+// inputs score to the backend
+async function postScore (e) { 
+
+
+  e.preventDefault() 
+
+  const res = await fetch()
+
+
+  
+
+
+  lengthOfQuestions+=QuestionList.length;
+  let endingScore = score; 
+
+
+
+
+}
+
+
+
+
 
 // resets the quiz
 const resetQuiz = () => {
 
 
-  
-    totalScore +=score; 
-    lengthOfQuestions+=QuestionList.length;
+    postScore();
+     
 
-    console.log(totalScore); 
-    console.log(lengthOfQuestions);
-
-    localStorage.setItem('numberQuestions',JSON.stringify(lengthOfQuestions))
-    localStorage.setItem('score',JSON.stringify(totalScore))
 
 
   let options = document.getElementById("options")

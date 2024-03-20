@@ -17,7 +17,29 @@ console.log('userScore is : ' + userScore)
 console.log('totalQuestions is : ' + totalQuestions)
 console.log('averageScore is : ' + averageScore)
 
+const baseURL = "http://localhost:8080/"
+// gets the score from backend
+async function getScore () { 
+
+
+    const res = await fetch(baseURL, {
+        
+        method:'GET'
+        
+        
+        
+    })
+
+        console.log(res)
+
+
+
+}
+
+
 // sets the text of the button and will eventaully display the correct average
 arrButtonText.innerText = "Array Quiz \n " + "Average Score : " + averageScore +"%"
 varButtonText.innerText = "Variable Quiz " + "Average Score : " + averageScore +"%"
 methodButtonText.innerText = "Method Quiz " + "Average Score : " + averageScore +"%"   
+
+
