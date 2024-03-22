@@ -174,19 +174,29 @@ const nextQuestion = () => {
 
 // inputs score to the backend
 async function postScore (e) { 
+  lengthOfQuestions+=QuestionList.length;
+  let endingScore = score; 
 
 
   e.preventDefault() 
 
-  const res = await fetch()
+  const res = await fetch("", { 
+
+    method: 'POST', 
+    body: JSON.stringify({ 
+
+
+      
+    })
+
+
+  } )
 
 
   
 
 
-  lengthOfQuestions+=QuestionList.length;
-  let endingScore = score; 
-
+ 
 
 
 
