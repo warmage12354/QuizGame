@@ -9,9 +9,9 @@ app.use(express.json())
 
 app.post('/',(req,res)=> { 
 
-    const parcel = req.body;
-   
-    if(!parcel) { 
+    const length = req.body;
+   const score = req.body;
+    if(!length || !score ) { 
 
         return res.status(400).send({status:'failed'})
 
