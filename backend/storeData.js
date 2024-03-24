@@ -3,7 +3,7 @@ const sqlite3 = require('sqlite3').verbose();
 let sql;
 
 // connect database
-const db = new sqlite3.Database('./database.db',sqlite3.OPEN_READWRITE,(err)=> { 
+export const db = new sqlite3.Database('./database.db',sqlite3.OPEN_READWRITE,(err)=> { 
 
     if(err)  return console.error(err.message);
 }) 
@@ -37,7 +37,7 @@ const dropTable = () => {
 
 const insertData = (correct,numberOfQuestions) => { 
 
-    sql = 'Insert INTO Quiz(totalNumberCorrect,totalNumberWrong,Average) VALUES (?,?,?)' 
+    sql = 'Insert INTO Quiz(totalNumberCorrect,totalNumber) VALUES (?,?)' 
     db.run(sql,[],(err)=> { 
         if(err) return console.error(err.message)
     })

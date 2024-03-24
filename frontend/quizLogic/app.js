@@ -173,11 +173,10 @@ const nextQuestion = () => {
 };
 
 // inputs score to the backend
-async function postScore (length,score) { 
+async function postScore (getLength,getScore) { 
   
 
 
-  e.preventDefault() 
 
 
   const res = await fetch("http://localhost:8080/", { 
@@ -186,8 +185,8 @@ async function postScore (length,score) {
     body: JSON.stringify({ 
 
 
-      length : input.value ,
-      score: input.value
+      getLength : lengthOfQuestions ,
+      getScore: score
       
     })
 
@@ -212,9 +211,8 @@ async function postScore (length,score) {
 const resetQuiz = () => {
 
   lengthOfQuestions+=QuestionList.length;
-  let endingScore = score; 
 
-    postScore(lengthOfQuestions,endingScore);
+    postScore(lengthOfQuestions,score);
      
 
 
